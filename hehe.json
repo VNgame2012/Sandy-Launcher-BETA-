@@ -1,0 +1,28 @@
+{
+  "rootfs": {
+    "name": "ubuntu",
+    "download_url": "https://github.com/VNgame2012/Sandy-Launcher-BETA-/releases/download/beta-asset/ubuntu-questing-aarch64-pd-v4.30.1.tar.xz",
+    "extract_path": "/storage/emulated/0/SL-Shared"
+  },
+
+  "java": {
+    "version": "17",
+    "install_cmd": "apt update && apt install -y openjdk-17-jre wget"
+  },
+
+  "minecraft": {
+    "launcher_url": "https://your-url.com/launcher.jar",
+    "install_path": "/mc",
+    "start_cmd": "cd /mc && java -jar launcher.jar"
+  },
+
+  "autosetup": {
+    "steps": [
+      "download_rootfs",
+      "extract_rootfs",
+      "install_java",
+      "install_minecraft",
+      "mark_complete"
+    ]
+  }
+}
